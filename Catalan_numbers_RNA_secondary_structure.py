@@ -50,9 +50,6 @@ def secondary_structure_optimized(RNA_seq):
                     value = value + lst[i][k-1]*score(j,k)
                 else:
                     value = value + lst[i][k-1] * (lst[k+1][j-1]) *score(j,k)
-                if((j == 3) and (i==0)):
-                    print(k)
-                    print(value)
             value = value + score(i,j)*lst[i+1][j-1]
             if (((i+j)%2 ==0)):
                 lst[i][j] = 0
